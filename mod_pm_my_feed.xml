@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- /** * @copyright Copyright © 2016 - All rights reserved. * @license GNU General Public License v2.0 * @generator http://xdsoft/joomla-module-generator/ */ -->
+<extension type="module" method="upgrade" client="site">
+  <name>MOD_PM_MY_FEED</name>
+  <creationDate>Mar 2016</creationDate>
+  <author>Ponto Mega</author>
+  <authorEmail>contato@pontomega.com.br</authorEmail>
+  <authorUrl>http://www.pontomega.com.br</authorUrl>
+  <copyright>Copyright © 2016 - All rights reserved.</copyright>
+  <license>GNU General Public License v2.0</license>
+  <version>1.0.2</version>
+  <description>MOD_PM_MY_FEED_DESCRIPTION</description>
+  <files>
+    <filename module="mod_pm_my_feed">mod_pm_my_feed.php</filename>
+    <filename>mod_pm_my_feed.xml</filename>
+    <filename>index.html</filename>
+    <folder>language</folder>
+    <folder>tmpl</folder>
+    <folder>assets</folder>
+  </files>
+  <config>
+    <fields name="params">
+      <fieldset name="advanced">
+        <field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+        <field name="moduleclass_sfx" type="textarea" rows="3" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+        <field name="cache" type="list" default="1" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+          <option value="1">JGLOBAL_USE_GLOBAL</option>
+          <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+        </field>
+        <field name="cache_time" type="text" default="900" label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+        <field name="cachemode" type="hidden" default="static">
+          <option value="static"></option>
+        </field>
+      </fieldset>
+      <fieldset name="configuration" label="MOD_CONFIGURATION" description="MOD_CONFIGURATION_FIELDSET_DESCRIPTION">
+        <field type="list" label="MOD_CUSTOM_CATEGORY_ENABLE" name="customcategory_enable" description="MOD_CUSTOM_CATEGORY_ENABLE_DESCRIPTION" default="false" class="" >
+          <option value="false">JNO</option>
+          <option value="customcategory">MOD_CUSTOM_CATEGORY</option>
+          <option value="custommenu">MOD_CUSTOM_MENU</option>
+        </field>
+        <field name="customcategory" type="category" extension="com_content" label="MOD_CUSTOM_CATEGORY" description="MOD_CUSTOM_CATEGORY_DESCRIPTION" />
+        <field name="custommenu" type="menuitem" extension="com_menu" label="MOD_CUSTOM_MENU" description="MOD_CUSTOM_MENU_DESCRIPTION" />
+        <field type="list" label="MOD_TYPE_OF_FEED" name="type_of_feed" description="MOD_TYPE_OF_FEED_DESCRIPTION" default="rss" class="" >
+          <option value="rss">RSS</option>
+          <option value="atom">ATOM</option>
+        </field>
+        <field type="list" label="MOD_TYPE_OF_LINK" name="type_of_link" description="MOD_TYPE_OF_LINK_DESCRIPTION" default="icon_image" class="" >
+          <option value="font_awesome_icon">FONT_AWESOME_ICON</option>
+          <option value="text">TEXT</option>
+          <option value="icon_image">ICON_IMAGE</option>
+          <option value="text_and_icon_image">TEXT_AND_ICON_IMAGE</option>
+          <option value="text_and_font_awesome_icon">TEXT_AND_FONT_AWESOME_ICON</option>
+        </field>
+        <field type="list" label="MOD_TEXT_WITH_IMAGE_POSTION" name="text_with_image_postion" description="MOD_TEXT_WITH_IMAGE_POSTION_DESCRIPTION" default="right" class="" >
+          <option value="top">TOP</option>
+          <option value="bottom">BOTTOM</option>
+          <option value="right">RIGHT</option>
+          <option value="left">LEFT</option>
+        </field>
+        <field type="media" label="MOD_ICON_IMAGE" name="icon_image" description="MOD_ICON_IMAGE_DESCRIPTION" default="modules/mod_pm_my_feed/assets/css/images/Web-RSS-Feed-Metro-icon.png" directory="" />
+        <field type="text" label="MOD_FONT_AWESOME_ICON" name="font_awesome_icon" description="MOD_FONT_AWESOME_ICON_DESCRIPTION" default="fa fa-rss-square" class="" size="32" filter="" />
+        <field type="editor" label="MOD_TEXT" name="text" description="MOD_TEXT_ONLY__WITHOUT_ICONS" default="" class="" width="500px" height="300px" filter="raw" />
+      </fieldset>
+    </fields>
+  </config>
+  <languages folder="language">
+    <language tag="en-GB">en-GB/en-GB.mod_pm_my_feed.sys.ini</language>
+    <language tag="en-GB">en-GB/en-GB.mod_pm_my_feed.ini</language>
+    <language tag="pt-BR">pt-BR/pt-BR.mod_pm_my_feed.sys.ini</language>
+    <language tag="pt-BR">pt-BR/pt-BR.mod_pm_my_feed.ini</language>
+    <language tag="ru-RU">ru-RU/ru-RU.mod_pm_my_feed.sys.ini</language>
+    <language tag="ru-RU">ru-RU/ru-RU.mod_pm_my_feed.ini</language>
+  </languages>
+</extension>
